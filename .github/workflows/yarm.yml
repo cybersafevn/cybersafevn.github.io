@@ -1,4 +1,0 @@
-- name: Setup Yarn[InternetShortcut]
-URL=https://github.com/cybersafevn/cybersafevn.github.io
-
-  uses: mskelton/setup-yarn@v1.0.1
