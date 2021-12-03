@@ -1,11 +1,4 @@
-*.redxml
-*.pdf
-*~
-*.swp
-/*-[0-9][0-9].xml
-.refcache
-.targets.mk
-venv/
-issues.json
-lib
-draft-brand-indicators-for-message-identification-latest.md
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
