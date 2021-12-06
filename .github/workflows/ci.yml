@@ -37,6 +37,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
+          environment: production
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CYBERSAFE_VN }}'
           projectId: cybersafe-vn
   
