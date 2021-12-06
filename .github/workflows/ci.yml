@@ -31,13 +31,12 @@ jobs:
     - run: npm install firebase@9.6.0
     - run: npm install -g firebase-tools@9.23.0
     
-  build_and_preview:
-    runs-on: ubuntu-latest
-    steps:
+  deploy:
+     runs-on: ubuntu-latest
+     steps:
       - uses: actions/checkout@v2
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CYBERSAFE_VN }}'
           projectId: cybersafe-vn
   
