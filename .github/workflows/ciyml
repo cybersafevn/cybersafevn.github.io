@@ -1,10 +1,10 @@
-name: Jekyll site CI
+name: Jekyll CI
 
 on:
   push:
-    branches: [ cloudflare ]
+    branches: [ master ]
   pull_request:
-    branches: [ cloudflare ]
+    branches: [ master ]
 
 jobs:
   build:
@@ -17,4 +17,4 @@ jobs:
       run: |
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future && jekyll build --trace"
